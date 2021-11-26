@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="http://fonts.cdnfonts.com/css/manrope" rel="stylesheet">
+    <script type="text/javascript" src="./index.js"></script>
+    
+</head>
+<body onload="startTime()">
+    <div class="curent-time">
+       
+    </div>
+    <div class="light-box"></div>
+    <div class="light-box2"></div>
+    <div class="clock">
+        <div><img src="./image/clock_logo/clock_logo.png" alt=""></div>
+        <div class="time">
+            <div><pre class="period">TIME</pre></div>
+            <div>
+            <div id="hour1"><p id="hour"></p>
+                <p style="font-size: 15px;padding-top: 0%; color: #3D087B;margin-top: -45px;">Hours</p>
+            </div>
+           </div>
+
+            <b>:</b>
+           <div>
+            <div id="min1"><p id="min"></p>
+                <p style="font-size: 15px;padding-top: 0%; color: #3D087B;margin-top: -45px;">Mins</p>
+            </div>
+            </div>
+
+            <b>:</b>
+            <div>
+            <div id="sec1"><p id="sec"></p>
+                <p style="font-size: 15px;padding-top: 0%; color: #3D087B;margin-top: -45px;">Secs</p>
+            </div>
+         </div>
+            <div class="am-pm" id="ampm"></div>
+
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="box1">
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="wake-up"><img src="./image/wake_up/wake_up.png" alt=""><pre class="text1">Set wake up time</pre>
+                <select name="break" id="break">
+                        <option value="">Select</option>
+                        <option value="00:00">12.00 - 01.00AM</option>                        
+                        <option value="19:30">01.00 - 02.00AM</option>                       
+                        <option value="02:00">02.00 - 03.00AM</option>                     
+                        <option value="03:00">03.00 - 04.00AM</option>
+                        <option value="04:00">04.00 - 05.00AM</option>                      
+                        <option value="05:00">05.00 - 06.00AM</option>                   
+                        <option value="06:00">06.00 - 07.00AM</option>       
+                        <option value="07:00">07.00 - 08.00AM</option>        
+                        <option value="08:00">08.00 - 09.00AM</option>
+                        <option value="09:00">09.00 - 10.00AM</option>
+                        <option value="10:00">10.00 - 11.00AM</option>
+                        <option value="11:00">11.00 - 12.00AM</option>          
+                        <option value="12:00">12.00 - 01.00PM</option>
+                        <option value="13:00">01.00 - 02.00PM</option>
+                        <option value="14:00">02.00 - 03.00PM</option>
+                        <option value="15:00">03.00 - 04.00PM</option>
+                        <option value="16:00">04.00 - 05.00PM</option>
+                        <option value="17:00">05.00 - 06.00PM</option>
+                        <option value="18:00">06.00 - 07.00PM</option>
+                        <option value="19:00">07.00 - 08.00PM</option>
+                        <option value="20:00">08.00 - 09.00PM</option>
+                        <option value="21:00">09.00 - 10.00PM</option>
+                        <option value="22:00">10.00 - 11.00PM</option>
+                        <option value="23:00">11.00 - 12.00PM</option>
+                    </select>
+                
+                
+            </div>
+            <div class="lunch-time"><img src="./image/lunch_time/lunch_time.png" alt=""><pre class="text2">Set lunch time</pre>
+                <select name="lunch" id="lunch">
+                    <option value="">Select</option>
+                    <option value="00:00">12.00 - 01.00AM</option>                        
+                    <option value="01:30">01.00 - 02.00AM</option>                       
+                    <option value="02:00">02.00 - 03.00AM</option>                     
+                    <option value="03:00">03.00 - 04.00AM</option>
+                    <option value="04:00">04.00 - 05.00AM</option>                      
+                    <option value="05:00">05.00 - 06.00AM</option>                   
+                    <option value="06:00">06.00 - 07.00AM</option>       
+                    <option value="07:00">07.00 - 08.00AM</option>        
+                    <option value="08:00">08.00 - 09.00AM</option>
+                    <option value="09:00">09.00 - 10.00AM</option>
+                    <option value="10:00">10.00 - 11.00AM</option>
+                    <option value="11:00">11.00 - 12.00AM</option>          
+                    <option value="12:00">12.00 - 01.00PM</option>
+                    <option value="13:00">01.00 - 02.00PM</option>
+                    <option value="14:00">02.00 - 03.00PM</option>
+                    <option value="15:00">03.00 - 04.00PM</option>
+                    <option value="16:00">04.00 - 05.00PM</option>
+                    <option value="17:00">05.00 - 06.00PM</option>
+                    <option value="18:00">06.00 - 07.00PM</option>
+                    <option value="19:00">07.00 - 08.00PM</option>
+                    <option value="20:00">08.00 - 09.00PM</option>
+                    <option value="21:00">09.00 - 10.00PM</option>
+                    <option value="22:00">10.00 - 11.00PM</option>
+                    <option value="23:00">11.00 - 12.00PM</option>
+                </select>
+            </div>
+            <div class="nap-time"><img src="./image/nap_time/nap_time.png" alt=""><pre class="text3">Set nap time</pre>
+                <select name="dinner" id="dinner">
+                    <option value="">Select</option>
+                    <option value="00:00">12.00 - 01.00AM</option>                        
+                    <option value="01:30">01.00 - 02.00AM</option>                       
+                    <option value="02:00">02.00 - 03.00AM</option>                     
+                    <option value="03:00">03.00 - 04.00AM</option>
+                    <option value="04:00">04.00 - 05.00AM</option>                      
+                    <option value="05:00">05.00 - 06.00AM</option>                   
+                    <option value="06:00">06.00 - 07.00AM</option>       
+                    <option value="07:00">07.00 - 08.00AM</option>        
+                    <option value="08:00">08.00 - 09.00AM</option>
+                    <option value="09:00">09.00 - 10.00AM</option>
+                    <option value="10:00">10.00 - 11.00AM</option>
+                    <option value="11:00">11.00 - 12.00AM</option>          
+                    <option value="12:00">12.00 - 01.00PM</option>
+                    <option value="13:00">01.00 - 02.00PM</option>
+                    <option value="14:00">02.00 - 03.00PM</option>
+                    <option value="15:00">03.00 - 04.00PM</option>
+                    <option value="16:00">04.00 - 05.00PM</option>
+                    <option value="17:00">05.00 - 06.00PM</option>
+                    <option value="18:00">06.00 - 07.00PM</option>
+                    <option value="19:00">07.00 - 08.00PM</option>
+                    <option value="20:00">08.00 - 09.00PM</option>
+                    <option value="21:00">09.00 - 10.00PM</option>
+                    <option value="22:00">10.00 - 11.00PM</option>
+                    <option value="23:00">11.00 - 12.00PM</option>
+                </select>
+            </div>
+        </div>
+        <div class="box2" ><img id= "img1" class="img1" src="./image/bgimg.jpg" alt=""></div>
+        <div id="box3" class="box3">
+            <p id="wake-up"></p>
+            <p id="lunch-time"></p>
+            <p id="nap-time"></p>
+        </div>
+        <div class="box4">
+            <button onclick="Calculate()">Set Time !</button></div>
+    </div>
+    <p class="note">Note: Go to Artboard 3(Assets) to see all the assets used in this project</p>
+</body>
+</html>
